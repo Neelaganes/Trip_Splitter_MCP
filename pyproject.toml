@@ -1,0 +1,25 @@
+[project]
+name = "trip-splitter"
+version = "0.1.0"
+description = "Splitwise Style MCP server: Log Trip expenses and see who owes whom and settle up."
+readme = "README.md"
+authors = [
+    { name = "Neelaganesh", email = "neelaganeshd@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "fastmcp==4.1.8",
+]
+
+[project.scripts]
+trip-splitter = "trip_splitter.server:main"
+
+[build-system]
+requires = ["uv_build>=0.13.9,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "pytest-asyncio>=1.5.0",
+]
